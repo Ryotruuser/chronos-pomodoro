@@ -1,21 +1,22 @@
 import './styles/theme.css';
 import './styles/global.css';
 import { Container } from './components/Container/Container';
+import { Heading } from './components/Heading/Heading';
 
 export function App() {
   return (
     <>
       <Container>
-        <section>LOGO</section>
+        <Heading>LOGO</Heading>
       </Container>
       <Container>
-        <section>MENU</section>
+        <Heading>MENU</Heading>
       </Container>
       <Container>
-        <section>FORM</section>
+        <Heading>FORM</Heading>
       </Container>
       <Container>
-        <section>FOOTER</section>
+        <Heading>FOOTER</Heading>
       </Container>
     </>
   );
