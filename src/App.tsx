@@ -14,10 +14,13 @@ import { Footer } from './components/Footer';
 import { useState } from 'react';
 
 export function App() {
-  const [numero, configurarNumero] = useState(0);
+  const [numero, setNumero] = useState(() => {
+    console.log('lazy initialization');
+    return 0;
+  });
 
   function handleClick() {
-    configurarNumero(numero + 1);
+    setNumero(prevState => prevState + 1);
   }
 
   return (
