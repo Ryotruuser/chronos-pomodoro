@@ -11,25 +11,10 @@ import { Cycles } from './components/Cycles';
 import { DefaultButton } from './components/DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
 import { Footer } from './components/Footer';
-import { useState } from 'react';
 
 export function App() {
-  const [numero, setNumero] = useState(() => {
-    console.log('lazy initialization');
-    return 0;
-  });
-
-  function handleClick() {
-    setNumero(prevState => prevState + 1);
-  }
-
   return (
     <>
-      <Heading>
-        Numero: {numero}
-        <button onClick={handleClick}>click</button>
-      </Heading>
-
       <Container>
         <Heading>
           <Logo />
@@ -50,7 +35,7 @@ export function App() {
             <DefaultInput
               type='text'
               id='input'
-              labelText={numero.toString()}
+              labelText='task'
               placeholder='Digite algo'
             />
           </div>
